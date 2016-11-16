@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>api:mer</title>
+    <script>
+      //Jquery sees it is running in CommonJS env, and wants to be used as such.
+      window.$ = window.jQuery = require('./libs/jquery-3.1.0.min.js');
+    </script>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <!-- <script src="libs/knockout-3.4.0.js"></script> -->
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="app/app.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+    <div class="container-fluid" id="main">
+      <div class="row" id="header">
+        <div class="col-xs-8">
+          <div class="pull-left" id="logo">
+            api:mer
+          </div>
+        </div>
+      </div>
+      <div class="row" id="content">
+
+      </div>
+    </div>
+
+
+
+    <script>
+      $(document).ready(function(){
+        window.app = new App();
+        // ko.applyBindings(app, document.getElementById('main'));
+      });
+    </script>
+  </body>
+</html>
